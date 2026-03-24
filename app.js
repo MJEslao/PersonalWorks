@@ -3,7 +3,6 @@ const path = require('path');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
-const { sequelize } = require('./models');
 
 const pagesRouter = require('./routes/pages');
 
@@ -27,14 +26,10 @@ app.use((req, res) => {
   res.status(404).render('pages/not-found', { title: 'Not Found' });
 });
 
-(async () => {
-  try {
-    await sequelize.sync();
-    app.listen(PORT, () => {
-      console.log(`PersonalWorks Node.js app running on http://localhost:${PORT}`);
-    });
-  } catch (error) {
-    console.error('Failed to start application:', error);
-    process.exit(1);
-  }
-})();
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`PersonalWorks Node.js app running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
