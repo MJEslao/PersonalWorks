@@ -1,0 +1,24 @@
+#pjax-container {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 260ms ease, transform 260ms ease;
+  will-change: opacity, transform;
+}
+
+#pjax-container.is-leaving {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+#pjax-container.is-entering {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+body.is-pjax-loading {
+  cursor: progress;
+}
+
+body.is-pjax-loading a {
+  pointer-events: none;
+}

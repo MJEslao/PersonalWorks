@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title><%= title ? `${title} | PersonalWorks` : 'PersonalWorks' %></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="/custom/css/main.css" />
+  <link rel="stylesheet" href="/custom/css/pjax.css" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <noscript><link rel="stylesheet" href="/custom/css/noscript.css" /></noscript>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <div class="logo">
+        <div class="avatar-flip">
+          <div class="avatar-inner">
+
+            <div class="avatar-face avatar-front">
+              <img src="/custom/images/avatar-vector.png" alt="Vector MJ">
+            </div>
+
+            <div class="avatar-face avatar-back">
+              <img src="/custom/images/avatar-real.png" alt="Real MJ">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/" data-pjax>Home</a></li>
+          <li><a href="/about" data-pjax>Who I Am</a></li>
+          <li><a href="/services" data-pjax>Ways of Thinking</a></li>
+          <li><a href="/projects" data-pjax>Things I've Made</a></li>
+          <li><a href="/contact" data-pjax>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <div class="inner">
+          <div id="pjax-container" data-page-title="<%= title ? `${title} | PersonalWorks` : 'PersonalWorks' %>">
+            <%- body %>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <footer id="footer">
+      <p class="copyright">&copy; <a href="#">Eslao</a> 2017.</p>
+    </footer>
+  </div>
+
+  <script src="/custom/js/jquery.min.js"></script>
+  <script src="/custom/js/skel.min.js"></script>
+  <script src="/custom/js/util.js"></script>
+  <script src="/custom/js/main.js"></script>
+  <script src="/custom/js/pjax.js"></script>
+</body>
+</html>
