@@ -1095,7 +1095,7 @@
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to bottom, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("/items/images/bg.jpg");
+			background-image: linear-gradient(to bottom, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("/custom/css/items/images/bg.jpg?v=2");
             filter: blur(5px) saturate(20%);
             -webkit-filter: blur(5px) saturate(20%);
 			background-size: auto;
