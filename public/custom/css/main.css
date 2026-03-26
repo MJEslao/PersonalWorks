@@ -1095,7 +1095,12 @@
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to bottom, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("/custom/css/items/images/bg.jpg?v=2");
+			background-image: linear-gradient(
+			to bottom,
+			rgba(19, 21, 25, 0.5),
+			rgba(19, 21, 25, 0.5)
+			),
+			url("/images/bg.jpg?v=2");
             filter: blur(5px) saturate(20%);
             -webkit-filter: blur(5px) saturate(20%);
 			background-size: auto;
@@ -1132,11 +1137,11 @@
 			-ms-filter: blur(0.2rem);
 			filter: blur(0.2rem);
 		}
-
+/*
 		body.is-loading #bg:before {
 			background-color: #000000;
 		}
-
+*/
 /* Wrapper */
 
 	#wrapper {
