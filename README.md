@@ -1,68 +1,111 @@
-# PersonalWorks Node.js Conversion
+# PersonalWorks (Node.js Portfolio)
 
-This is a Node.js + Express conversion of your old Laravel 5.5 `PersonalWorks` project.
+## Overview
 
-## What was converted
+PersonalWorks is a server-rendered portfolio application built with Node.js and Express. It showcases projects, services, and personal background through a lightweight and maintainable architecture.
 
-- Static pages:
-  - `/`
-  - `/about`
-  - `/services`
-- Blog post routes:
-  - `GET /posts`
-  - `GET /posts/create`
-  - `POST /posts`
-  - `GET /posts/:id`
-- `posts` model with timestamps
-- Frontend assets under `public/custom`
-- Basic pagination equivalent to the Laravel version
+This project is optimized for simplicity, fast deployment, and clean structure, making it suitable for both demonstration and extension into larger applications.
 
-## Stack used
+---
 
-- Express
-- EJS
-- Sequelize
-- SQLite
+## Features
 
-## Why SQLite here
+- Server-side rendering using EJS
+- Clean routing with Express
+- Modular folder structure
+- Static asset management via Express middleware
+- Vercel-ready deployment configuration
+- Lightweight (no database dependency)
 
-I used SQLite so the converted project can run immediately with almost no setup. If you want, this can be switched to MySQL or PostgreSQL later.
+---
 
-## Run locally
+## Pages
 
-```bash
+- `/` – Home  
+- `/about` – About  
+- `/services` – Services  
+- `/projects` – Projects  
+- `/contact` – Contact  
+
+---
+
+## Tech Stack
+
+- Node.js  
+- Express.js  
+- EJS  
+- Express EJS Layouts  
+- Morgan  
+
+---
+
+## Project Structure
+
+```
+project-root/
+│
+├── public/              # Static assets (CSS, JS, images)
+├── routes/              # Route definitions
+├── views/               # EJS templates
+│   ├── layouts/
+│   └── pages/
+├── app.js               # Application entry point
+├── vercel.json          # Deployment configuration
+└── package.json
+```
+
+---
+
+## Local Setup
+
+Install dependencies:
+
+```
 npm install
-npm run seed
+```
+
+Run the application:
+
+```
 npm start
 ```
 
-Then open:
+Access locally:
 
-```bash
+```
 http://localhost:3000
 ```
 
-## Laravel to Node.js mapping
+---
 
-- `routes/web.php` -> `routes/pages.js` and `routes/posts.js`
-- `app/Http/Controllers/*` -> `controllers/*`
-- `app/Post.php` -> `models/Post.js`
-- `resources/views/*.blade.php` -> `views/*.ejs`
-- migration for `posts` -> Sequelize model + `sequelize.sync()`
+## Deployment
 
-## Not yet converted
+This project is deployed on Vercel.
 
-These existed visually in the old project but did not have backend logic in Laravel either:
+- Automatic deployments via Git integration  
+- No additional backend services required  
+- Optimized for serverless environments  
 
-- Login form
-- Register form
-- Edit/update/delete posts
-- User authentication
+---
 
-## Good next upgrades
+## Design Considerations
 
-- Add authentication with Passport or session-based login
-- Replace SQLite with MySQL if you want parity with a production LAMP setup
-- Split the app into MVC modules more strictly
-- Add validation middleware
-- Add tests with Jest + Supertest
+- Removed database layer to simplify deployment and reduce overhead  
+- Uses server-rendered pages instead of SPA for faster initial load  
+- Structured for easy scalability (routes, views, assets separation)  
+- Static-first approach with minimal runtime complexity  
+
+---
+
+## Future Enhancements
+
+- Contact form integration (API or email service)  
+- Improved UI/UX animations and transitions  
+- Content management via JSON or headless CMS  
+- Optional backend expansion (authentication, APIs)  
+
+---
+
+## Author
+
+Mark Joshua Eslao
